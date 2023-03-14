@@ -1,11 +1,11 @@
-About foxes
-===========
+About foxes-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/foxes-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/FraunhoferIWES/foxes
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/foxes-feedstock/blob/main/LICENSE.txt)
 
 Summary: Farm Optimization and eXtended yield Evaluation Software
 
