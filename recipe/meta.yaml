@@ -24,6 +24,7 @@ requirements:
     - numpy
     - xarray
     - dask-core
+    - distributed
     - scipy
     - plotly
     - arm_pyart
