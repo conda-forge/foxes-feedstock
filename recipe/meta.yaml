@@ -28,9 +28,10 @@ requirements:
     - scipy
     - netcdf4
     - plotly
-    - python-kaleido
     - iwopy
     - pymoo
+    - arm_pyart
+    - autovizwidget
 
 test:
   imports:
