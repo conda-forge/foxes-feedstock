@@ -29,6 +29,9 @@ requirements:
     - plotly
     - arm_pyart
     - autovizwidget
+    - iwopy
+    - pymoo
+    - python-kaleido
 
 test:
   imports:
