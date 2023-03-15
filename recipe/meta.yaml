@@ -24,12 +24,8 @@ requirements:
     - numpy
     - xarray
     - dask-core
-    - distributed
     - scipy
-    - netcdf4
     - plotly
-    - iwopy
-    - pymoo
     - arm_pyart
     - autovizwidget
 
