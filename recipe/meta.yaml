@@ -26,11 +26,13 @@ requirements:
     - dask-core
     - distributed
     - scipy
-    - netcdf4
     - plotly
-    - python-kaleido
+    - arm_pyart
+    - autovizwidget
     - iwopy
     - pymoo
+    - python-kaleido
+    - netcdf4
 
 test:
   imports:
