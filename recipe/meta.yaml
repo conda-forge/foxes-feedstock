@@ -27,7 +27,6 @@ requirements:
     - distributed
     - scipy
     - plotly
-    - arm_pyart
     - autovizwidget
     - iwopy
     - pymoo >=0.6
