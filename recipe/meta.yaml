@@ -30,7 +30,7 @@ requirements:
     - arm_pyart
     - autovizwidget
     - iwopy
-    - pymoo>=0.6
+    - pymoo >=0.6
     - python-kaleido
     - netcdf4
 
