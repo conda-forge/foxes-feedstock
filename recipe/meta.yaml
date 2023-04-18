@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: 3dc2833a9be4cafb24b94d8d8f7003c2ed3d878ab79cf710e9c12e731251be35
+  sha256: eb1d39857e6d02702607346f9d2b63eb9c3a3766740c52bafca97c13ba51563f
 
 build:
   noarch: python
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7,<3.11
+    - python >=3.7
     - pip
   run:
-    - python >=3.7,<3.11
+    - python >=3.7
     - matplotlib-base
     - numpy
     - xarray
@@ -30,7 +30,7 @@ requirements:
     - arm_pyart
     - autovizwidget
     - iwopy
-    - pymoo
+    - pymoo>=0.6
     - python-kaleido
     - netcdf4
 
