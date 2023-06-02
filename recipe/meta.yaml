@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: eb1d39857e6d02702607346f9d2b63eb9c3a3766740c52bafca97c13ba51563f
+  sha256: 54d54eca2307bc23a104ec7ce712c39d64dbddd920f211b9f31075aced44c396
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - python >=3.7
     - matplotlib-base
     - numpy
+    - pandas <2.0.0
     - xarray
     - dask-core
     - distributed
