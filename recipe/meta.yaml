@@ -22,7 +22,7 @@ requirements:
     - python >=3.7
     - matplotlib-base
     - numpy
-    - pandas <2.0.0
+    - pandas
     - xarray
     - dask-core
     - scipy
