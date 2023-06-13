@@ -30,7 +30,7 @@ requirements:
     - autovizwidget
     - iwopy
     - arm_pyart
-    - pyyaml
+    - pyyamil
 
 test:
   imports:
@@ -38,6 +38,8 @@ test:
   requires:
     - pip
     - pytest
+    - python-kaleido
+    - pymoo
   source_files:
     - tests
   commands:
