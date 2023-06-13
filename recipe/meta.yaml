@@ -30,7 +30,7 @@ requirements:
     - autovizwidget
     - iwopy
     - arm_pyart
-    - pyyamil
+    - pyyaml
 
 test:
   imports:
