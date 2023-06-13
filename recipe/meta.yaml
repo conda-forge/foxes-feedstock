@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,17 +22,15 @@ requirements:
     - python >=3.7
     - matplotlib-base
     - numpy
-    - pandas <2.0.0
+    - pandas
     - xarray
     - dask-core
-    - distributed
     - scipy
     - plotly
     - autovizwidget
     - iwopy
-    - pymoo >=0.6
-    - python-kaleido
-    - netcdf4
+    - arm_pyart
+    - pyyaml
 
 test:
   imports:
@@ -40,6 +38,8 @@ test:
   requires:
     - pip
     - pytest
+    - python-kaleido
+    - pymoo
   source_files:
     - tests
   commands:
