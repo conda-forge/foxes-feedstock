@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -25,14 +25,12 @@ requirements:
     - pandas <2.0.0
     - xarray
     - dask-core
-    - distributed
     - scipy
     - plotly
     - autovizwidget
     - iwopy
-    - pymoo >=0.6
-    - python-kaleido
-    - netcdf4
+    - arm_pyart
+    - pyyaml
 
 test:
   imports:
