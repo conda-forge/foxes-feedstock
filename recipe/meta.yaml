@@ -31,6 +31,7 @@ requirements:
     - iwopy
     - arm_pyart
     - pyyaml
+    - tqdm
 
 test:
   imports:
