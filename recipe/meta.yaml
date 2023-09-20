@@ -21,10 +21,10 @@ requirements:
   run:
     - python >=3.7
     - matplotlib-base
-    - numpy <2
-    - pandas <2
+    - numpy
+    - pandas
     - xarray
-    - dask-core
+    - dask
     - scipy
     - plotly
     - autovizwidget
