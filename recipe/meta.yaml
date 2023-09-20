@@ -27,9 +27,7 @@ requirements:
     - dask
     - scipy
     - plotly
-    - autovizwidget
     - iwopy
-    - arm_pyart
     - pyyaml
 
 test:
