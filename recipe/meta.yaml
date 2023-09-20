@@ -29,6 +29,7 @@ requirements:
     - plotly
     - iwopy
     - pyyaml
+    - netcdf4
 
 test:
   imports:
