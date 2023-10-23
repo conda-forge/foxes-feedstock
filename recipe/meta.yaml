@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "0.4.4.2" %}
+{% set version = "0.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: 9bb20aa8123e9509f27915b7966d200a9f79ed728f6d12aafef94fe4cbf6d61d
+  sha256: 81c89bc5a42c4be10d57d98913aeba502953c6ba266785fc9983e5b82583545b
 
 build:
   noarch: python
