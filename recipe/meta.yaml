@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . windio -vv
   number: 0
 
 requirements:
@@ -42,7 +42,6 @@ test:
   source_files:
     - tests
   commands:
-    - pip install windio
     - pip check
     - pytest tests
 
