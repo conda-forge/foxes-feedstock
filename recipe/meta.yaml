@@ -30,9 +30,6 @@ requirements:
     - iwopy
     - pyyaml
     - netcdf4
-    - pip
-    - pip:
-      - windio
 
 test:
   imports:
