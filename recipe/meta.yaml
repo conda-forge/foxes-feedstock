@@ -42,6 +42,7 @@ test:
   source_files:
     - tests
   commands:
+    - pip install windio
     - pip check
     - pytest tests
 
