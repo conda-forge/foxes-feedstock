@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "0.5.0.1" %}
+{% set version = "0.5.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: 435e691f8c73e039c24571860d5c06f5ad8d554f46cf7b7e5a3cb2caff0af571
+  sha256: d8337017a9272fa1dc3eae76c4e4bce1e9efdd8d8c319bdfb0c3e8044fb91016
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . windio -vv
-  number: 1
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
