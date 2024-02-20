@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "0.6" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: cd62671a6438df534bf408d702d43cdeaf918ccf87c8179d01df7257b552ae85
+  sha256: 0ff478f54b23feec3658fdbfbb4fa33aebdfd01c51cdace8434d1d66d99d9f7e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -30,6 +30,7 @@ requirements:
     - iwopy
     - pyyaml
     - netcdf4
+    - pyarrow
 
 test:
   imports:
