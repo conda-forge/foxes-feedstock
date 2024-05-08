@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: c39272f8e60bff945a8242fac89e06982c6df078c0325ab25193f1aa6c1114fa
+  sha256: 5cb78326b047f283f450d28100cfe0b085b8f6ae32cf9f9c7290c1afaa454179
 
 build:
   noarch: python
