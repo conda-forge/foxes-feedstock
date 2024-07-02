@@ -14,9 +14,6 @@ build:
   number: 0
 
 requirements:
-  host:
-    - python >=3.8
-    - pip
   build:
     - python
     - matplotlib-base
@@ -28,7 +25,9 @@ requirements:
     - windrose
     - iwopy
     - pyyaml
-    - netcdf4
+  host:
+    - python
+    - pip
   run:
     - python
     - matplotlib-base
