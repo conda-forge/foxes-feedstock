@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "0.8" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,17 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: 131a86ff413e360cff75a2ebb9ded675f1742a9588f8394278b20e16d3549a9e
+  sha256: 61b332c6cb08fd3dd7eaa5f621fc941390133aaabecc6fd88c2f7af98a2469f1
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv 
-  number: 1
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   build:
     - python
     - matplotlib-base
-    - numpy 
+    - numpy
     - pandas
     - xarray
     - dask
