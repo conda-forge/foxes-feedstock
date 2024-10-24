@@ -30,6 +30,7 @@ requirements:
     - pyyaml
     - netcdf4
     - cycler
+    - tqdm
 
 test:
   imports:
