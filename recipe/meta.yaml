@@ -10,8 +10,9 @@ source:
   sha256: e79a29d29765a5c1300d6d9e5cec520bd74a20b6303df486685922d9a683e455
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv #--no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
@@ -24,8 +25,6 @@ requirements:
     - numpy
     - pandas
     - xarray
-    - dask
-    - distributed
     - scipy
     - windrose
     - pyyaml
