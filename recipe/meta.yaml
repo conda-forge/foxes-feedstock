@@ -12,8 +12,11 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv #--no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
+  entry_points:
+    - foxes_yaml = foxes.input.yaml.yaml:foxes_yaml
+    - foxes_windio = foxes.input.yaml.windio.windio:foxes_windio
 
 requirements:
   host:
