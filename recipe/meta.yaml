@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "0.8.2" %}
+{% set version = "1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: 870e1175cbc17c8aae460a5a09ee679b7bd05bd046e7606063073a2b0f711d74
+  sha256: e79a29d29765a5c1300d6d9e5cec520bd74a20b6303df486685922d9a683e455
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -17,6 +17,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - matplotlib-base
@@ -30,6 +31,7 @@ requirements:
     - pyyaml
     - netcdf4
     - cycler
+    - tqdm
 
 test:
   imports:
