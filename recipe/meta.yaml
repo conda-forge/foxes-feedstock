@@ -1,5 +1,6 @@
 {% set name = "foxes" %}
 {% set version = "1.2" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -11,16 +12,19 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv #--no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
+  entry_points:
+    - foxes_yaml = foxes.input.yaml.yaml:foxes_yaml
+    - foxes_windio = foxes.input.yaml.windio.windio:foxes_windio
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - matplotlib-base
     - numpy
     - pandas
@@ -36,6 +40,7 @@ test:
   imports:
     - foxes
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
   source_files:
