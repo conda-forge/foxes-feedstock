@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: e29f611c625a23299a339c2185fa2a6e7afdfad8f71114cf3ebe246103e11883
+  sha256: 742616a2f36e791ad08b6bb8e31711eea97eeb938647db93f612205ae9030175
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   entry_points:
     - foxes_yaml = foxes.input.yaml.yaml:foxes_yaml
     - foxes_windio = foxes.input.yaml.windio.windio:foxes_windio
