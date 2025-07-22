@@ -26,7 +26,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - matplotlib-base >=3.8
-    - numpy >= 1.26
+    - numpy >=1.26
     - pandas >=2.0
     - xarray >=2023
     - scipy >=1.12
