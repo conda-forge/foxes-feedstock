@@ -1,6 +1,6 @@
 {% set name = "foxes" %}
 {% set version = "1.5" %}
-{% set python_min = "3.8" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -22,17 +22,17 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=61
   run:
     - python >={{ python_min }}
-    - matplotlib-base
-    - numpy
-    - pandas
-    - xarray
-    - scipy
-    - pyyaml
-    - cycler
-    - tqdm
+    - matplotlib-base >=3.8
+    - numpy >= 1.26
+    - pandas >=2.0
+    - xarray >=2023
+    - scipy >=1.12
+    - pyyaml >=4.0
+    - cycler >=0.10
+    - tqdm >=2.0
 
 test:
   imports:
@@ -40,8 +40,8 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest
-    - h5netcdf
+    - pytest >=7.0
+    - h5netcdf >=1.0
   source_files:
     - tests
   commands:
