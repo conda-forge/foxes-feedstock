@@ -1,6 +1,6 @@
 {% set name = "foxes" %}
-{% set version = "1.4" %}
-{% set python_min = "3.8" %}
+{% set version = "1.5" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: faa2ec7d18c3059beaa6c6603152324cc1c4afb3c2a70844e2358803e9b54955
+  sha256: 74694a8e770060084c0d0098c453e9e8cb3bfc7417c1f4c76d4c0264af650352
 
 build:
   noarch: python
@@ -22,17 +22,17 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=61
   run:
     - python >={{ python_min }}
-    - matplotlib-base
-    - numpy
-    - pandas
-    - xarray
-    - scipy
-    - pyyaml
-    - cycler
-    - tqdm
+    - matplotlib-base >=3.8
+    - numpy >=1.26
+    - pandas >=2.0
+    - xarray >=2023
+    - scipy >=1.12
+    - pyyaml >=4.0
+    - cycler >=0.10
+    - tqdm >=2.0
 
 test:
   imports:
@@ -40,8 +40,8 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest
-    - h5netcdf
+    - pytest >=7.0
+    - h5netcdf >=1.0
   source_files:
     - tests
   commands:
