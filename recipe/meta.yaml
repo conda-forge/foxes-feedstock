@@ -33,6 +33,7 @@ requirements:
     - pyyaml >=4.0
     - cycler >=0.10
     - tqdm >=2.0
+    - utm >=0.5
 
 test:
   imports:
