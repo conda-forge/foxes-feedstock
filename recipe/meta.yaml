@@ -1,6 +1,5 @@
 {% set name = "foxes" %}
 {% set version = "1.9.2" %}
-{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -15,49 +14,63 @@ build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
   entry_points:
-    - foxes_yaml = foxes.input.yaml.yaml:foxes_yaml
-    - foxes_windio = foxes.input.yaml.windio.windio:foxes_windio
+    - foxes_yaml = foxes.input.yaml.yaml:main
+    - foxes_windio = foxes.input.yaml.windio.windio:main
+    - foxes_create_mean_dataset = foxes.input.states.create.dataset_mean:main
+    - wrf2foxes = foxes.input.states.create.wrf2foxes:main
+    - era52foxes = foxes.input.states.create.era52foxes:main
+    - iconDream2foxes = foxes.input.states.create.icon_dream:main
+    - eww2foxes = foxes.input.farm_layout.from_eww:main
+    - foxes_create_gaussian_lookup = foxes.utils.create_gaussian_lookup:main
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - pip
-    - setuptools >=61
+    - setuptools >=84
   run:
-    - python >={{ python_min }}
+    - python >=3.10
     - matplotlib-base >=3.8
     - numpy >=1.26
     - pandas >=2.0
-    - xarray >=2023
-    - netcdf4 >=1.0
     - scipy >=1.12
-    - pyyaml >=4.0
-    - cycler >=0.10
-    - tqdm >=2.0
+    - xarray >=2023
+    - netcdf4 >=1.6
+    - h5netcdf >=1.8.1
+    - h5py >=3.11.0
+    - pyyaml >=6.0
+    - tqdm >=4.31.1
     - utm >=0.5
 
 test:
   imports:
     - foxes
   requires:
-    - python {{ python_min }}
+    - python
     - pip
     - pytest >=7.0
+    - nbmake >=1.0
+    - multiprocess >=0.70.17
   source_files:
     - tests
   commands:
     - pip check
     - pytest tests
+    - foxes_yaml --help
+    - foxes_windio --help
+    - foxes_create_mean_dataset --help
+    - wrf2foxes --help
+    - era52foxes --help
+    - iconDream2foxes --help
+    - eww2foxes --help
+    - foxes_create_gaussian_lookup --help
 
 about:
   home: https://github.com/FraunhoferIWES/foxes
   summary: Farm Optimization and eXtended yield Evaluation Software
   description: |
     The software foxes is a modular wind farm simulation and wake
-    modelling toolbox which is based on engineering wake models. It
-    has many applications, for example wind farm optimization,
-    wind farm post-construction analysis, wake model studies, and
-    wind farm simulations invoking complex model chains.
+    modelling toolbox based on engineering wake models.
   license: MIT
   license_file: LICENSE
 
