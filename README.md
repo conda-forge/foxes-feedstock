@@ -10,10 +10,7 @@ Package license: MIT
 Summary: Farm Optimization and eXtended yield Evaluation Software
 
 The software foxes is a modular wind farm simulation and wake
-modelling toolbox which is based on engineering wake models. It
-has many applications, for example wind farm optimization,
-wind farm post-construction analysis, wake model studies, and
-wind farm simulations invoking complex model chains.
+modelling toolbox based on engineering wake models.
 
 
 Current build status
