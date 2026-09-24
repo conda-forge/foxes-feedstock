@@ -25,11 +25,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools >=84
   run:
-    - python >=3.10
+    - python >={{ python_min }},<3.14
     - matplotlib-base >=3.8
     - numpy >=1.26
     - pandas >=2.0
@@ -46,11 +46,9 @@ test:
   imports:
     - foxes
   requires:
-    - python
+    - python {{ python_min }}
     - pip
     - pytest >=7.0
-    - nbmake >=1.0
-    - multiprocess >=0.70.17
   source_files:
     - tests
   commands:
