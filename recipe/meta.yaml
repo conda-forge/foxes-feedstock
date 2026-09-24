@@ -1,5 +1,6 @@
 {% set name = "foxes" %}
 {% set version = "1.9.5" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
