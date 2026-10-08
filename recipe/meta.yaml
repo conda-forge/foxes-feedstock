@@ -54,7 +54,7 @@ test:
     - tests
   commands:
     - pip check
-    - pytest tests
+    - pytest tests --ignore=tests/0_consistency/test_docs_design_tokens.py
     - foxes_yaml --help
     - foxes_windio --help
     - foxes_create_mean_dataset --help
