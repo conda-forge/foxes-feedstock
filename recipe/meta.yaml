@@ -30,7 +30,7 @@ requirements:
     - pip
     - setuptools >=84
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }}
     - matplotlib-base >=3.8
     - numpy >=1.26
     - pandas >=2.0
@@ -40,7 +40,7 @@ requirements:
     - h5netcdf >=1.8.1
     - h5py >=3.11.0
     - pyyaml >=6.0
-    - tqdm >=4.31.1
+    - tqdm >=4.66.3
     - utm >=0.5
 
 test:
@@ -49,12 +49,14 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest >=7.0
+    - pytest >=9.0.3
+    - pillow >=12.3.0
   source_files:
     - tests
+    - examples
   commands:
     - pip check
-    - pytest tests --ignore=tests/0_consistency/test_docs_design_tokens.py
+    - pytest tests
     - foxes_yaml --help
     - foxes_windio --help
     - foxes_create_mean_dataset --help
