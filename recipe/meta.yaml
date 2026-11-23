@@ -1,5 +1,5 @@
 {% set name = "foxes" %}
-{% set version = "1.9.9" %}
+{% set version = "1.10.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/FraunhoferIWES/foxes/archive/v{{ version }}.tar.gz
-  sha256: 474e3f11a04faaee6478de3c24ea65247fddf95563ae0895f06e334abec56929
+  sha256: 2014299da8faac90286ce9689d0f747fbab375df0993c73f8074b0b27c3f9785
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - pip
     - setuptools >=84
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }}
     - matplotlib-base >=3.8
     - numpy >=1.26
     - pandas >=2.0
@@ -40,7 +40,7 @@ requirements:
     - h5netcdf >=1.8.1
     - h5py >=3.11.0
     - pyyaml >=6.0
-    - tqdm >=4.31.1
+    - tqdm >=4.66.3
     - utm >=0.5
 
 test:
@@ -49,12 +49,14 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest >=7.0
+    - pytest >=9.0.3
+    - pillow >=12.3.0
   source_files:
     - tests
+    - examples
   commands:
     - pip check
-    - pytest tests --ignore=tests/0_consistency/test_docs_design_tokens.py
+    - pytest tests
     - foxes_yaml --help
     - foxes_windio --help
     - foxes_create_mean_dataset --help
